@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: Inter, "Segoe UI", Arial, sans-serif;
+	background: #07111f;
+	color: #e8eefc;
+}
+
+a {
+	color: inherit;
+}

@@ -1,0 +1,287 @@
+:host {
+	display: block;
+	color: #e8eefc;
+	background:
+		radial-gradient(circle at top left, rgba(64, 107, 255, 0.18), transparent 30%),
+		radial-gradient(circle at top right, rgba(0, 210, 255, 0.12), transparent 28%),
+		linear-gradient(180deg, #07111f 0%, #0b1524 50%, #09101b 100%);
+	min-height: 100vh;
+}
+
+.page-shell {
+	width: min(1120px, calc(100% - 2rem));
+	margin: 0 auto;
+	padding: 2rem 0 4rem;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+}
+
+
+.hero-image-wrap {
+	display: flex;
+	justify-content: center;
+	margin: 1rem 0;
+}
+
+.hero-image {
+	display: block;
+	width: min(360px, 100%);
+	height: auto;
+}
+
+.hero-copy,
+.featured-image,
+.toc,
+.article section,
+.faq-item {
+	background: rgba(9, 18, 31, 0.82);
+	border: 1px solid rgba(148, 180, 255, 0.14);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+	backdrop-filter: blur(14px);
+}
+
+.hero-copy {
+	border-radius: 1.5rem;
+	padding: 2rem;
+}
+
+.hero-title,
+.hero-byline {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hero-title {
+	margin: 0;
+}
+
+.hero-byline {
+	margin-left: 1rem;
+	font-size: 0.89rem;
+	color: #9ab0d7;
+}
+
+.eyebrow,
+.featured-kicker,
+.meta-label {
+	color: #9ab0d7;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	font-size: 0.75rem;
+	margin: 0 0 0.75rem;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+summary {
+	text-wrap: pretty;
+}
+
+h1 {
+	margin: 0;
+	font-size: clamp(2.5rem, 5vw, 4.2rem);
+	line-height: 0.95;
+	letter-spacing: -0.05em;
+}
+
+h2 {
+	margin: 0 0 1rem;
+	font-size: clamp(1.55rem, 2.3vw, 2.15rem);
+	line-height: 1.1;
+}
+
+h3 {
+	margin: 1.5rem 0 0.75rem;
+	font-size: 1.15rem;
+}
+
+p {
+	margin: 0 0 1rem;
+	color: #d5def1;
+	line-height: 1.8;
+}
+
+.lede {
+	font-size: 1.05rem;
+	max-width: 70ch;
+}
+
+.hero-copy .lede {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.hero-card {
+	border-radius: 1.5rem;
+	padding: 1.5rem;
+	display: grid;
+	gap: 1rem;
+}
+
+.featured-image {
+	margin-top: 1.25rem;
+	border-radius: 1.5rem;
+	min-height: 260px;
+	padding: 1.5rem;
+	display: flex;
+	align-items: flex-end;
+	background:
+		linear-gradient(135deg, rgba(9, 18, 31, 0.86), rgba(13, 37, 68, 0.75)),
+		linear-gradient(120deg, rgba(255, 182, 72, 0.25), rgba(56, 173, 255, 0.1));
+}
+
+.featured-image h2 {
+	margin-bottom: 0.75rem;
+	max-width: 18ch;
+}
+
+.toc,
+.article section {
+	border-radius: 1.5rem;
+	padding: 1.5rem;
+}
+
+.toc {
+	margin-top: 1.25rem;
+}
+
+.toc ol {
+	margin: 0;
+	padding-left: 1.2rem;
+	display: grid;
+	gap: 0.65rem;
+}
+
+.toc a,
+.links-callout a,
+.cta-button {
+	color: #8cc9ff;
+	text-decoration: none;
+}
+
+.toc a:hover,
+.links-callout a:hover,
+.cta-button:hover {
+	text-decoration: underline;
+}
+
+.article {
+	display: grid;
+	gap: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.article ul,
+.article ol {
+	margin: 0 0 1rem;
+	padding-left: 1.25rem;
+	display: grid;
+	gap: 0.75rem;
+}
+
+.article li {
+	color: #d5def1;
+	line-height: 1.7;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.card {
+	padding: 1rem;
+	border-radius: 1rem;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(148, 180, 255, 0.1);
+}
+
+.card-soft {
+	min-height: 100%;
+}
+
+.links-callout {
+	border-left: 4px solid #61a7ff;
+}
+
+.faq-list {
+	display: grid;
+	gap: 0.85rem;
+}
+
+.faq-item {
+	border-radius: 1rem;
+	padding: 0.1rem 1rem;
+}
+
+.faq-item summary {
+	cursor: pointer;
+	padding: 1rem 0;
+	font-weight: 700;
+	color: #f4f8ff;
+}
+
+.faq-item p {
+	padding-bottom: 1rem;
+}
+
+.conclusion {
+	text-align: left;
+}
+
+.cta-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 3rem;
+	padding: 0.75rem 1.2rem;
+	border-radius: 999px;
+	background: linear-gradient(135deg, #61a7ff, #7cf0d6);
+	color: #06111d;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.cta-button:hover {
+	text-decoration: none;
+	filter: brightness(1.05);
+}
+
+@media (max-width: 860px) {
+	.hero,
+	.cards {
+		grid-template-columns: 1fr;
+	}
+
+	.page-shell {
+		width: min(100% - 1rem, 1120px);
+		padding-top: 1rem;
+	}
+}
+
+@media (max-width: 640px) {
+	.hero-copy,
+	.featured-image,
+	.toc,
+	.article section {
+		padding: 1.1rem;
+	}
+
+	h1 {
+		line-height: 1.02;
+	}
+
+	.lede {
+		font-size: 1rem;
+	}
+}
