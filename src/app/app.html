@@ -2,11 +2,20 @@
 <main class="page-shell">
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">{{ slug }}</p>
-      <h1 class="hero-title">Guild Wars 2 Beginner Guide</h1>
-      <small class="hero-byline">by Maddwrath, nickname SoyChamp</small>
+      <div class="hero-topline">
+        <div class="hero-avatar-shell">
+          <img src="/profilepic.png" alt="Maddwrath profile picture" class="hero-avatar" />
+          <span class="hero-live-badge">LIVE</span>
+        </div>
+
+        <div class="hero-heading">
+          <p class="eyebrow">{{ slug }}</p>
+          <h1 class="hero-title">Guild Wars 2 Beginner Guide</h1>
+          <small class="hero-byline">by Maddwrath, The SoyChamp of Australia</small>
+        </div>
+      </div>
       <div class="hero-image-wrap">
-        <img src="/gw1.jpg" alt="Guild Wars 2 hero illustration" class="hero-image" />
+        <img src="/gw1.jpg" [alt]="featuredImageAlt" class="hero-image" />
       </div>
       <p class="lede">
         Start strong in Guild Wars 2 with a practical roadmap for leveling, class choice, mounts, gold making, and
@@ -23,14 +32,22 @@
 
 
   <section class="toc" aria-label="Table of contents">
-    <h2>Table of Contents</h2>
-    <nav>
-      <ol>
-        @for (item of tocItems; track item.id) {
-        <li><a [href]="'#' + item.id">{{ item.label }}</a></li>
-        }
-      </ol>
-    </nav>
+    <div class="toc-layout">
+      <div class="toc-main">
+        <h2>Table of Contents</h2>
+        <nav>
+          <ol>
+            @for (item of tocItems; track item.id) {
+            <li><a [href]="'#' + item.id">{{ item.label }}</a></li>
+            }
+          </ol>
+        </nav>
+      </div>
+
+      <figure class="toc-side">
+        <img src="/tableofcontent.jpg" alt="Guild Wars 2 table of contents illustration" class="toc-image" />
+      </figure>
+    </div>
   </section>
 
   <article class="article">
@@ -251,16 +268,6 @@
       </p>
     </section>
 
-    <section class="links-callout">
-      <h2>Suggested Internal Links</h2>
-      <p>
-        Use these placeholders to connect this cornerstone article to supporting content on your site.
-      </p>
-      <ul>
-        <li><a href="#">[Related Article: Best GW2 Gold Farming Methods]</a></li>
-        <li><a href="#">[Related Article: Best GW2 Beginner Classes]</a></li>
-      </ul>
-    </section>
 
     <section id="faq">
       <h2>Guild Wars 2 Beginner FAQ</h2>
