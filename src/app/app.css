@@ -190,6 +190,21 @@ p {
 	max-width: 18ch;
 }
 
+.community-image,
+.beginner-image,
+.classes-image,
+.mounts-image,
+.levelup-image,
+.endgame-image {
+	display: block;
+	width: min(520px, 100%);
+	height: auto;
+	margin: 0 0 1rem;
+	border-radius: 1rem;
+	border: 1px solid rgba(148, 180, 255, 0.14);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
 .toc,
 .article section {
 	border-radius: 1.5rem;
@@ -276,6 +291,51 @@ p {
 
 .links-callout {
 	border-left: 4px solid #61a7ff;
+}
+
+.stay-connected-links {
+	list-style: none;
+	margin: 0 0 1rem;
+	padding: 0;
+	display: grid;
+	gap: 0.75rem;
+}
+
+.stay-connected-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: min(100%, 320px);
+	min-height: 3rem;
+	padding: 0.75rem 1rem;
+	border-radius: 999px;
+	background: #280874; /* Violet */
+	border: 1px solid #d0a7ff;
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+	transition:
+		transform 0.15s ease,
+		filter 0.15s ease,
+		border-color 0.15s ease,
+		background-color 0.15s ease;
+}
+.stay-connected-button:hover {
+	background: #5e0c35; /* Dark pink */
+}
+
+.stay-connected-button:hover {
+	text-decoration: none;
+	filter: brightness(1.08);
+	transform: translateY(-1px);
+	border-color: rgba(10, 4, 1, 0.38);
+	background: rgba(255, 255, 255, 0.07);
+}
+
+.stay-connected-button:focus-visible {
+	outline: 2px solid #8cc9ff;
+	outline-offset: 3px;
 }
 
 .faq-list {

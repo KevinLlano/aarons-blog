@@ -52,17 +52,16 @@
 
   <article class="article">
     <section id="start-strong">
-      <h2>How to Start Strong in Guild Wars 2</h2>
+      <h2>What Is Guild Wars 2? Is It Worth Your Time?</h2>
       <p>
-        Guild Wars 2 is one of the rare MMOs that rewards curiosity instead of punishing it. You do not need to follow a
-        rigid quest path, and you do not need to rush into an optimized build on day one to have a good time.
-        The most important early lesson is that nearly everything in Tyria feeds into long-term account progress.
+        Guild Wars 2 is a long-running MMO built around open-world exploration, dynamic events, and flexible progression.
+        If you are wondering whether it is worth your time, the answer is yes, especially if you like games that
+        reward curiosity instead of forcing a rigid quest path.
       </p>
       <p>
         The core game is built around dynamic events, world bosses, exploration, and story progression, so beginners
         should think in terms of movement and discovery rather than endless combat grinding.
-        That mindset makes the leveling journey smoother and helps you understand why Guild Wars 2 still stands out in a
-        crowded MMO market.
+        That approach is a big reason Guild Wars 2 still stands out in a crowded MMO market.
       </p>
       <p>
         If you are watching Maddwrath on Twitch while you play, pay attention to how often good players move between
@@ -73,6 +72,7 @@
 
     <section id="beginner-tips">
       <h2>Best Guild Wars 2 Beginner Tips</h2>
+      <img src="/newplayers.png" alt="Guild Wars 2 beginner tips image" class="beginner-image" />
       <p>
         The fastest way to feel confident is to build a few good habits early. These Guild Wars 2 beginner tips are
         simple, but they pay off for the entire life of your account.
@@ -96,8 +96,28 @@
       </p>
     </section>
 
+    <section id="community">
+      <h2>Joining Guilds & Finding Groups</h2>
+      <img src="/guild.jpg" alt="Guild Wars 2 community and guild image" class="community-image" />
+      <p>
+        Community play matters early in Guild Wars 2 because it makes world bosses, squads, and group events easier to
+        understand while you are still learning the game.
+      </p>
+      <ul>
+        @for (tip of communityTips; track tip) {
+        <li>{{ tip }}</li>
+        }
+      </ul>
+      <p>
+        My guild <strong>MaddFam</strong> can be a good place to start if you want familiar people to run with while you figure out the
+  
+        social side of the game.
+      </p>
+    </section>
+
     <section id="leveling-guide">
       <h2>Guild Wars 2 Leveling Guide for Faster Progress</h2>
+      <img src="/levelup.jfif" alt="Guild Wars 2 leveling guide image" class="levelup-image" />
       <p>
         A strong Guild Wars 2 leveling guide should focus on efficient variety. You will level faster when you mix story
         objectives, map completion, heart tasks, events, and boss participation instead of repeating the same action for
@@ -128,6 +148,7 @@
 
     <section id="best-classes">
       <h2>Choosing the Right Guild Wars 2 Classes</h2>
+      <img src="/classes.jpg" alt="Guild Wars 2 classes image" class="classes-image" />
       <p>
         Guild Wars 2 classes are more flexible than many new players expect. A class is not just a label for damage or
         healing; it is a toolkit that changes depending on weapon choice, traits, and specialization path.
@@ -161,6 +182,7 @@
 
     <section id="mounts">
       <h2>How Guild Wars 2 Mounts Change the Game</h2>
+      <img src="/mounts.png" alt="Guild Wars 2 mounts image" class="mounts-image" />
       <p>
         Mounts are one of the biggest reasons Guild Wars 2 exploration feels so good. They are not just speed upgrades;
         they completely change how you move through terrain, reach objectives, and chain events together.
@@ -216,6 +238,7 @@
 
     <section id="endgame">
       <h2>Guild Wars 2 Endgame Progression Explained</h2>
+      <img src="/endgame.jfif" alt="Guild Wars 2 endgame progression image" class="endgame-image" />
       <p>
         Endgame in Guild Wars 2 is not about chasing a never-ending vertical gear treadmill. Instead, it is about
         choosing the content you enjoy, whether that's PvE, PvP, WvW, open-world progression, or achievement hunting,
@@ -243,32 +266,6 @@
       </p>
     </section>
 
-    <section id="mistakes">
-      <h2>Common Guild Wars 2 Beginner Mistakes</h2>
-      <p>
-        Most beginner problems in Guild Wars 2 come from trying to play it like a different MMO. The game is more
-        flexible than that, but it still rewards good planning and awareness.
-      </p>
-
-      <ul>
-        @for (mistake of mistakes; track mistake) {
-        <li>{{ mistake }}</li>
-        }
-      </ul>
-
-      <h3>How to avoid the usual traps</h3>
-      <p>
-        Slow down when you need to learn an encounter, and do not be afraid to swap weapons or traits if something feels
-        awkward.
-        A few small adjustments often solve problems that feel much bigger at first.
-      </p>
-      <p>
-        The best players are not the ones who rush the hardest. They are the ones who understand systems, keep moving,
-        and know when to follow an event chain instead of forcing a bad route.
-      </p>
-    </section>
-
-
     <section id="faq">
       <h2>Guild Wars 2 Beginner FAQ</h2>
       <div class="faq-list">
@@ -281,22 +278,22 @@
       </div>
     </section>
 
-    <section class="conclusion">
-      <h2>Conclusion: Build Confidence Before You Build Speed</h2>
+    <section id="learn-more">
+      <h2>Learn More & Stay Connected</h2>
       <p>
-        The best Guild Wars 2 Beginner Guide is not just a list of tips. It is a roadmap that helps you enjoy the game
-        while making steady account progress.
-        If you focus on events, map movement, sensible class choices, and consistent gold habits, the game becomes much
-        easier to understand.
+        Watching experienced players can help beginners pick up event routes, class choices, gold-making habits, and endgame
+        progression without rushing the learning process.
       </p>
+      <ul class="stay-connected-links">
+        <li><a class="stay-connected-button" [href]="twitchUrl" target="_blank" rel="noopener">Watch on Twitch</a></li>
+        <li><a class="stay-connected-button" href="https://www.tiktok.com/@maddwrath_?lang=en-GB" target="_blank" rel="noopener">Open TikTok</a></li>
+        <li><a class="stay-connected-button" href="https://maddwrath.vercel.app/" target="_blank" rel="noopener">Visit Official Website</a></li>
+      </ul>
       <p>
-        When you are ready to see those ideas in motion, watch Maddwrath live on Twitch for Guild Wars 2 gameplay,
-        beginner guidance, and MMO community discussion.
-        It is a practical way to pick up route ideas, class comparisons, and endgame context without overcomplicating
-        the learning process.
+        Explore Guild Wars 2 at your own pace and use the resources that help you enjoy the journey most.
       </p>
-      <a class="cta-button" [href]="twitchUrl" target="_blank" rel="noopener">Watch Maddwrath Live on Twitch</a>
     </section>
+
   </article>
 
   <script type="application/ld+json">

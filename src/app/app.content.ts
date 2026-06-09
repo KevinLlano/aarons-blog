@@ -21,14 +21,15 @@ export const APP_PAGE_CONTENT = {
   featuredImageAlt: 'Featured image placeholder for a Guild Wars 2 beginner guide article',
   twitchUrl: 'https://www.twitch.tv/maddwrath',
   tocItems: [
-    { id: 'start-strong', label: 'How to Start Strong in Guild Wars 2' },
+    { id: 'start-strong', label: 'What Is Guild Wars 2? Is It Worth Your Time?' },
     { id: 'beginner-tips', label: 'Best Beginner Tips' },
+    { id: 'community', label: 'Guilds & Finding Groups' },
     { id: 'leveling-guide', label: 'Leveling Guide for Faster Progress' },
     { id: 'best-classes', label: 'Choosing the Right Class' },
     { id: 'mounts', label: 'How Mounts Change the Game' },
     { id: 'gold-farming', label: 'Gold Farming for New Players' },
     { id: 'endgame', label: 'Endgame Progression Explained' },
-    { id: 'mistakes', label: 'Common Beginner Mistakes' },
+    { id: 'learn-more', label: 'Learn More & Stay Connected' },
     { id: 'faq', label: 'Guild Wars 2 Beginner FAQ' }
   ] satisfies TocItem[],
   beginnerTips: [
@@ -36,6 +37,12 @@ export const APP_PAGE_CONTENT = {
     'Use waypoints, gather materials as you move, and unlock map objectives to build account-wide progress while you level.',
     'Try different weapon sets early. In Guild Wars 2, your class plays very differently depending on the weapon you equip.',
     'Join a public squad for world bosses and meta events whenever you see them pop up. The reward density is excellent for new players.'
+  ],
+  communityTips: [
+    'Join a guild early so you have people to ask questions, run content with, and learn the game from while you progress.',
+    'Use Looking For Group for world bosses, strikes, and other open-world activity when you want fast access to squads.',
+    'Keep an eye out for Maddwrath’s guild if you want a familiar place to start meeting players and finding group runs.',
+    'Treat community play as part of your progression, not extra homework. Guild Wars 2 is better when you are connected to other players.'
   ],
   levelingSteps: [
     'Finish hearts, events, and story chapters in the same zone before moving on, because this keeps travel efficient and reduces downtime.',
@@ -71,13 +78,8 @@ export const APP_PAGE_CONTENT = {
     'Fractals of the Mists for scalable five-player content and a smooth bridge into structured group play.',
     'Strikes for short, focused encounters that teach mechanics without the full time commitment of a raid night.',
     'Raids if you want the hardest coordinated PvE challenge and are ready to learn roles, encounters, and squad discipline.',
-    'Open-world metas and expansion systems if you prefer exploration, long event chains, and account progression.'
-  ],
-  mistakes: [
-    'Buying random gear too often instead of learning which stats actually match your build and playstyle.',
-    'Ignoring movement and positioning. A good dodge at the right time matters more than standing still and trading hits.',
-    'Skipping exploration and waypoints, which makes future leveling and farming routes slower than they need to be.',
-    'Treating every class like a traditional MMO trinity role. Guild Wars 2 rewards adaptability more than rigid expectations.'
+    'Open-world metas and expansion systems if you prefer exploration, long event chains, and account progression.',
+    'WvW and PvP if you want competitive endgame with team fights, map control, and a more player-versus-player focused grind.'
   ],
   faqItems: [
     {

@@ -15,11 +15,11 @@ export class App {
   protected readonly twitchUrl = APP_PAGE_CONTENT.twitchUrl;
   protected readonly tocItems = APP_PAGE_CONTENT.tocItems;
   protected readonly beginnerTips = APP_PAGE_CONTENT.beginnerTips;
+  protected readonly communityTips = APP_PAGE_CONTENT.communityTips;
   protected readonly levelingSteps = APP_PAGE_CONTENT.levelingSteps;
   protected readonly classAdvice = APP_PAGE_CONTENT.classAdvice;
   protected readonly goldTips = APP_PAGE_CONTENT.goldTips;
   protected readonly endgameOptions = APP_PAGE_CONTENT.endgameOptions;
-  protected readonly mistakes = APP_PAGE_CONTENT.mistakes;
   protected readonly faqItems = APP_PAGE_CONTENT.faqItems;
   protected readonly faqSchema = APP_FAQ_SCHEMA;
 
