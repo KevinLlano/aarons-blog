@@ -195,6 +195,7 @@ p {
 .classes-image,
 .mounts-image,
 .levelup-image,
+.gold-farming-image,
 .endgame-image {
 	display: block;
 	width: min(520px, 100%);
@@ -293,12 +294,43 @@ p {
 	border-left: 4px solid #61a7ff;
 }
 
+#learn-more {
+	text-align: center;
+}
+
 .stay-connected-links {
 	list-style: none;
 	margin: 0 0 1rem;
 	padding: 0;
 	display: grid;
 	gap: 0.75rem;
+	justify-items: center;
+}
+
+.stay-connected-layout {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.stay-connected-figure {
+	margin: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.stay-connected-profile {
+	display: block;
+	width: 196px;
+	height: 196px;
+	margin: 0 auto;
+	transform: translateX(1rem);
+	border-radius: 1rem;
+	object-fit: cover;
+	border: 1px solid rgba(148, 180, 255, 0.14);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
 
 .stay-connected-button {
@@ -313,6 +345,7 @@ p {
 	border: 1px solid #d0a7ff;
 	color: #fff;
 	font-weight: 700;
+	text-align: center;
 	text-decoration: none;
 	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 	transition:
@@ -336,6 +369,13 @@ p {
 .stay-connected-button:focus-visible {
 	outline: 2px solid #8cc9ff;
 	outline-offset: 3px;
+}
+
+@media (min-width: 861px) {
+	.stay-connected-button {
+		width: 300px;
+		max-width: 300px;
+	}
 }
 
 .faq-list {
@@ -405,6 +445,10 @@ p {
 		grid-template-columns: 1fr;
 	}
 
+	.stay-connected-layout {
+		flex-direction: column;
+	}
+
 	.toc-side {
 		justify-self: start;
 	}
@@ -427,8 +471,27 @@ p {
 		max-width: 100%;
 	}
 
-	.hero-topline {
+	.stay-connected-layout {
 		flex-direction: column;
+	}
+
+	
+
+	.stay-connected-links {
+		width: 100%;
+		flex-basis: auto;
+	}
+
+	.stay-connected-button {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.stay-connected-profile {
+		width: min(196px, 100%);
+		height: auto;
+		aspect-ratio: 1;
+		margin-inline: auto;
 	}
 
 	h1 {

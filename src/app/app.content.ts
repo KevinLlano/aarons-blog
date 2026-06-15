@@ -29,8 +29,8 @@ export const APP_PAGE_CONTENT = {
     { id: 'mounts', label: 'How Mounts Change the Game' },
     { id: 'gold-farming', label: 'Gold Farming for New Players' },
     { id: 'endgame', label: 'Endgame Progression Explained' },
-    { id: 'learn-more', label: 'Learn More & Stay Connected' },
-    { id: 'faq', label: 'Guild Wars 2 Beginner FAQ' }
+    { id: 'faq', label: 'Guild Wars 2 Beginner FAQ' },
+    { id: 'learn-more', label: 'Learn More & Stay Connected' }
   ] satisfies TocItem[],
   beginnerTips: [
     'Follow the personal story and dynamic events in each zone so you level naturally instead of grinding one spot for hours.',
