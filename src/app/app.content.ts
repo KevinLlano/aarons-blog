@@ -79,7 +79,8 @@ export const APP_PAGE_CONTENT = {
     'Strikes for short, focused encounters that teach mechanics without the full time commitment of a raid night.',
     'Raids if you want the hardest coordinated PvE challenge and are ready to learn roles, encounters, and squad discipline.',
     'Open-world metas and expansion systems if you prefer exploration, long event chains, and account progression.',
-    'WvW and PvP if you want competitive endgame with team fights, map control, and a more player-versus-player focused grind.'
+    'WvW and PvP if you want competitive endgame with team fights, map control, and a more player-versus-player focused grind.',
+    'Legendary Crafting/Collection if you want to make gold and improve your account with the best items in the game.'
   ],
   faqItems: [
     {
