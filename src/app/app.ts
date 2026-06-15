@@ -1,6 +1,8 @@
+import { DOCUMENT } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { APP_FAQ_SCHEMA, APP_PAGE_CONTENT } from './app.content';
+import { APP_PAGE_CONTENT, APP_STRUCTURED_DATA } from './app.content';
+import { configureSeo } from './app.seo';
 
 @Component({
   selector: 'app-root',
@@ -21,16 +23,13 @@ export class App {
   protected readonly goldTips = APP_PAGE_CONTENT.goldTips;
   protected readonly endgameOptions = APP_PAGE_CONTENT.endgameOptions;
   protected readonly faqItems = APP_PAGE_CONTENT.faqItems;
-  protected readonly faqSchema = APP_FAQ_SCHEMA;
+  protected readonly structuredData = APP_STRUCTURED_DATA;
 
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
+  private readonly document = inject(DOCUMENT);
 
   constructor() {
-    this.title.setTitle(this.seoTitle);
-    this.meta.updateTag({ name: 'description', content: this.metaDescription });
-    this.meta.updateTag({ property: 'og:title', content: this.seoTitle });
-    this.meta.updateTag({ property: 'og:description', content: this.metaDescription });
-    this.meta.updateTag({ property: 'og:type', content: 'article' });
+    configureSeo(this.title, this.meta, this.document);
   }
 }

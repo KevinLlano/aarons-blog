@@ -14,11 +14,22 @@ export interface FaqItem {
 }
 
 export const APP_PAGE_CONTENT = {
+  // Update siteUrl to your live blog URL before deploying.
+  siteUrl: 'https://maddwrath.vercel.app',
+  canonicalPath: '/',
+  ogImagePath: '/gw1.jpg',
+  ogImageAlt: 'Guild Wars 2 beginner guide hero artwork',
+  authorName: 'Maddwrath',
+  datePublished: '2026-06-15',
+  dateModified: '2026-06-15',
+  themeColor: '#07111f',
+  keywords:
+    'guild wars 2 beginner guide, gw2 beginner tips, gw2 leveling guide, best gw2 class for beginners, gw2 mounts guide, gw2 gold farming, gw2 endgame guide, guild wars 2 2026',
   seoTitle: 'Guild Wars 2 Beginner Guide: Tips, Leveling & More',
   metaDescription:
     'Learn Guild Wars 2 beginner tips, leveling, classes, mounts, gold farming, and endgame progression in this 2026 guide.',
   slug: 'guild-wars-2-beginner-guide',
-  featuredImageAlt: 'Featured image placeholder for a Guild Wars 2 beginner guide article',
+  featuredImageAlt: 'Guild Wars 2 beginner guide hero artwork for new players',
   twitchUrl: 'https://www.twitch.tv/maddwrath',
   tocItems: [
     { id: 'start-strong', label: 'What Is Guild Wars 2? Is It Worth Your Time?' },
@@ -110,19 +121,73 @@ export const APP_PAGE_CONTENT = {
   ] satisfies FaqItem[]
 } as const;
 
-export const APP_FAQ_SCHEMA = JSON.stringify(
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: APP_PAGE_CONTENT.faqItems.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer
-      }
-    }))
-  },
-  null,
-  2
-);
+function getAbsoluteUrl(path: string): string {
+  const base = APP_PAGE_CONTENT.siteUrl.replace(/\/$/, '');
+  return `${base}${path}`;
+}
+
+const canonicalUrl = `${APP_PAGE_CONTENT.siteUrl.replace(/\/$/, '')}${APP_PAGE_CONTENT.canonicalPath}`;
+const ogImageUrl = getAbsoluteUrl(APP_PAGE_CONTENT.ogImagePath);
+
+export const APP_STRUCTURED_DATA = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${canonicalUrl}#website`,
+      url: canonicalUrl,
+      name: APP_PAGE_CONTENT.authorName,
+      inLanguage: 'en-US'
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: APP_PAGE_CONTENT.seoTitle,
+      description: APP_PAGE_CONTENT.metaDescription,
+      inLanguage: 'en-US',
+      isPartOf: { '@id': `${canonicalUrl}#website` },
+      primaryImageOfPage: { '@id': `${canonicalUrl}#primaryimage` }
+    },
+    {
+      '@type': 'ImageObject',
+      '@id': `${canonicalUrl}#primaryimage`,
+      url: ogImageUrl,
+      contentUrl: ogImageUrl,
+      caption: APP_PAGE_CONTENT.ogImageAlt
+    },
+    {
+      '@type': 'Article',
+      '@id': `${canonicalUrl}#article`,
+      headline: APP_PAGE_CONTENT.seoTitle,
+      description: APP_PAGE_CONTENT.metaDescription,
+      image: { '@id': `${canonicalUrl}#primaryimage` },
+      author: {
+        '@type': 'Person',
+        name: APP_PAGE_CONTENT.authorName,
+        url: APP_PAGE_CONTENT.twitchUrl
+      },
+      publisher: {
+        '@type': 'Person',
+        name: APP_PAGE_CONTENT.authorName
+      },
+      datePublished: APP_PAGE_CONTENT.datePublished,
+      dateModified: APP_PAGE_CONTENT.dateModified,
+      mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
+      inLanguage: 'en-US',
+      keywords: APP_PAGE_CONTENT.keywords
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonicalUrl}#faq`,
+      mainEntity: APP_PAGE_CONTENT.faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer
+        }
+      }))
+    }
+  ]
+});
