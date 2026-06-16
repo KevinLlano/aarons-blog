@@ -15,7 +15,7 @@ export interface FaqItem {
 
 export const APP_PAGE_CONTENT = {
   // Update siteUrl to your live blog URL before deploying.
-  siteUrl: 'https://maddwrath.vercel.app',
+  siteUrl: 'https://maddwrathgw2.vercel.app',
   canonicalPath: '/',
   ogImagePath: '/gw1.jpg',
   ogImageAlt: 'Guild Wars 2 beginner guide hero artwork',
